@@ -1,7 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  //count, setter for the piece of state, and initial value of 0 using useState 'hook"
+  const [count, setCount] = useState(0);
+
+  function decrement() {
+    setCount(count-1);
+  }
+
+  function increment(){
+    setCount(count+1);
+  }
+
   const someStyle = {
     background: 'blue',
     color: 'white',
@@ -12,6 +24,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <div>
+          <button onClick={decrement}>-</button>
+          <span>{count}</span>
+          <button onClick={increment}>+</button>
+        </div>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
