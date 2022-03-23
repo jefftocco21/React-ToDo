@@ -52,6 +52,7 @@ body {
 .btn-block {
   display: block;
   width: 100%;
+  background: mediumseagreen;
 }
 
 .task {
@@ -62,7 +63,7 @@ body {
 }
 
 .task.reminder {
-  border-left: 5px solid green;
+  border-left: 5px solid mediumseagreen;
 }
 
 .task h3 {
