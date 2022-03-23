@@ -4,28 +4,12 @@ import propTypes from 'prop-types'
 
 function App() {
 
-  return (
-    <div className="Container">
-        <header 
-            style={headingStyle}
-            className="App-header">
-          <Header 
 
-          title="To Do"
-          />
-        </header>
+  return (
+    <div className='container'>
+      <Header />
     </div>
   );
 }
 
-//can use javascript to create CSS rules
-// const headingStyle = {
-//   color:'red', 
-//   backgroundColor: 'black'
-// }
-
-Header.propTypes = {
-  title: propTypes.string.isRequired
-}
-
-export default App;
+export default App
