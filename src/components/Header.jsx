@@ -8,7 +8,7 @@ const Header = ({title}) => { //accepting props, specifcially title defined in A
   return (
     <header className="header">
       <h1>{title}</h1>
-      <Button color='steelblue' text='Add Item' onClick = {onClick} />
+      <Button color='steelblue' text='Add Task' onClick = {onClick} />
     </header>
   )
 }

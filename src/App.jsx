@@ -1,6 +1,6 @@
 import './App.css';
 import Header from './components/Header'
-import propTypes from 'prop-types'
+import Tasks from './components/Tasks'
 
 function App() {
 
@@ -8,6 +8,7 @@ function App() {
   return (
     <div className='container'>
       <Header />
+      <Tasks />
     </div>
   );
 }
