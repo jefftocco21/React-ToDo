@@ -2,10 +2,13 @@ import propTypes from 'prop-types'
 import Button from './Button'
 
 const Header = ({title}) => { //accepting props, specifcially title defined in App.jsx
+    const onClick = () => {
+        console.log("Console Click")
+    }
   return (
     <header className="header">
       <h1>{title}</h1>
-      <Button color='steelblue' text='Add Item' />
+      <Button color='steelblue' text='Add Item' onClick = {onClick} />
     </header>
   )
 }
