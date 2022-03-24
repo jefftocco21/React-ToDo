@@ -6,22 +6,26 @@ import { useState } from "react";
 
 const App = () => {
 
-  
-  //static task array
+    const[showAddTask, setShowAddTask] = useState(false)
+
+    //static task array
     const [tasks, setTasks] = useState([
       {
         id: 1,
         text: "Task 1",
+        date: 'Jan 1 at 1:00pm',
         reminder: true
       },
       {
         id: 2,
         text: "Task 2",
+        date: 'Jan 2 at 2:00pm',
         reminder: true
       },
       {
         id: 3,
         text: "Task 3",
+        date: 'Jan 3 at 3:00pm',
         reminder: true
       },
     ]);
@@ -45,8 +49,8 @@ const toggleReminder = (id) => {
 
     return (
       <div className="container">
-        <Header />
-        <AddTask onAdd={addTask}/>
+        <Header onAdd={() => setShowAddTask(!showAddTask)}/>
+        {showAddTask && <AddTask onAdd={addTask}/>}
         {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/> : 'No active tasks!'}
       </div>
     );
