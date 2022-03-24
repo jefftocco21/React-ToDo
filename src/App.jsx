@@ -6,6 +6,7 @@ import { useState } from "react";
 
 const App = () => {
 
+  
   //static task array
     const [tasks, setTasks] = useState([
       {
@@ -27,7 +28,9 @@ const App = () => {
 
 //add task
 const addTask = (task) => {
-  console.log(task)
+  const id = Math.floor(Math.random() * 1000) + 1
+  const newTask = {id, ...task}
+  setTasks([...tasks, newTask])
 }
 
 //delete task
