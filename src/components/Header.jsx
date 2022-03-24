@@ -1,11 +1,11 @@
 import propTypes from 'prop-types'
 import Button from './Button'
 
-const Header = ({title, onAdd}) => { //accepting props, specifcially title defined in App.jsx
+const Header = ({title, onAdd, showAdd}) => { //accepting props, specifcially title defined in App.jsx
   return (
     <header className="header">
       <h1>{title}</h1>
-      <Button color='steelblue' text='Add Task' onClick = {onAdd} />
+      <Button color='steelblue' text={showAdd ? 'Close' : 'Add'} onClick = {onAdd} />
     </header>
   )
 }
